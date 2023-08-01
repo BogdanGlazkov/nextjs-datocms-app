@@ -3,11 +3,11 @@ import CourseSection from "@/components/CourseSection";
 
 export default function Home({ course }) {
   return (
-    <main className="w-full">
+    <div className="w-full">
       {course.courseDetail.map((section) => (
         <CourseSection details={section} key={section.id} />
       ))}
-    </main>
+    </div>
   );
 }
 
