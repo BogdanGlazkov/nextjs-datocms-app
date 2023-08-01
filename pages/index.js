@@ -1,9 +1,12 @@
 import { gql, GraphQLClient } from "graphql-request";
+import CourseSection from "@/components/CourseSection";
 
-export default function Home() {
+export default function Home({ course }) {
   return (
     <main className="w-full">
-      <h1>Testy Test</h1>
+      {course.courseDetail.map((section) => (
+        <CourseSection details={section} key={section.id} />
+      ))}
     </main>
   );
 }
@@ -37,7 +40,6 @@ export async function getStaticProps() {
     },
   });
   const course = await graphQLClient.request(query);
-  console.log(course);
   return {
     props: course,
   };
