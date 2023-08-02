@@ -3,7 +3,6 @@ import React from "react";
 export default function CourseHeaderRecord({ details }) {
   const sentences = details.description.split(".");
   sentences.splice(sentences.length - 1, 1);
-  console.log(sentences);
 
   return (
     <div className="bg-gray-200 py-20 px-10 flex flex-col items-center">
