@@ -7,7 +7,7 @@ export default function PricingSectionRecord({ details }) {
       <h2 className="text-center text-8xl font-bold text-white mb-20">
         {details.title}
       </h2>
-      <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-4 justify-center flex-wrap max-w-6xl mx-auto items-center">
+      <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-4 justify-center flex-wrap max-w-6xl mx-auto items-stretch">
         {details.pricingCards.map((card, index) => (
           <PricingCard details={card} key={index} />
         ))}
