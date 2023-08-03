@@ -3,7 +3,7 @@ import React from "react";
 export default function PricingCard({ details }) {
   if (details.featured) {
     return (
-      <div className="w-full h-auto bg-white max-w-sm rounded-lg p-6 border-4 border-yellow-400">
+      <div className="w-full h-auto flex flex-col bg-white max-w-sm rounded-lg p-6 border-4 border-yellow-400">
         <h3 className="text-purple-500 text-xl mb-4 uppercase">
           {details.title}
         </h3>
@@ -17,7 +17,7 @@ export default function PricingCard({ details }) {
             <span className="text-lg m-1">{details.priceSuffix}</span>
           ) : null}
         </p>
-        <ul>
+        <ul className="grow">
           {details.description.split("*").map((item, index) => (
             <li className="text-purple-100 my-2 text-sm" key={index}>
               {item}
