@@ -36,7 +36,7 @@ export default function PricingCard({ details }) {
     );
   } else {
     return (
-      <div className="w-full h-auto bg-purple-500 max-w-sm rounded-lg p-6">
+      <div className="w-full h-auto flex flex-col bg-purple-500 max-w-sm rounded-lg p-6">
         <h3 className="text-white text-xl mb-4 uppercase">{details.title}</h3>
         <p className="text-white text-6xl font-bold mb-10">
           {details.isFree ? (
